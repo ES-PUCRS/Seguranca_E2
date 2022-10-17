@@ -10,7 +10,6 @@ public class App {
     private static final String fileName = "./resources/funcoesResumo - SHA1.mp4";
 
     public static void main(String args[]) throws NoSuchAlgorithmException, IOException {
-
         /* Java paramether validation */
         String file = args[0].isEmpty() ? fileName : args[0];
 
@@ -33,7 +32,6 @@ public class App {
         /* Results */
         System.out.println("Last hash block (bn-1): " + Hash.hexadecimalToString(bn1));
         System.out.println("First hash block (h0): " + Hash.hexadecimalToString(h0));
-
     }
 
 }
