@@ -11,7 +11,11 @@ public class App {
 
     public static void main(String args[]) throws NoSuchAlgorithmException, IOException {
         /* Java paramether validation */
-        String file = args[0].isEmpty() ? fileName : args[0];
+        String file = "";
+        if (args.length > 0)
+            file = args[0];
+        else
+            file = fileName;
 
         /* READ FILE */
         byte[] rawFile = Files.readAllBytes(Paths.get(file));
